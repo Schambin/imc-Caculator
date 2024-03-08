@@ -1,0 +1,201 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* CSS */
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #040924;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;}
+
+.container{
+    display: grid;
+    place-content: center;
+    margin-top: 31.4rem;
+}
+
+.mainCointainer {
+    margin: auto;
+    max-width: 42.8rem;
+    max-height: 25rem;
+    background-color: white;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .6rem;
+    height: 100vh;
+}
+
+.card {
+    padding: 4.8rem 6.4rem 6.4rem;
+    background: white;
+    margin-inline: auto;
+}
+
+span {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #0c3440;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 3.2rem;
+}
+
+#weightInputBox {
+    margin-bottom: 1.6rem;
+}
+
+#weightInput {
+    padding: 1.6rem;
+    background-color: #DCE2E9;
+    border-radius: .4rem;
+    border: none;
+}
+
+#weightInput:focus {
+    outline: 2px solid #02799D;
+}
+
+#heightInputBox {
+    margin-bottom: 3.2rem;
+    
+}
+
+#heightInput {
+    padding: 1.6rem;
+    background-color: #DCE2E9;
+    border-radius: .4rem;
+    border: none;
+}
+
+#heightInput:focus {
+    outline: 2px solid #02799D;
+}
+
+label{
+    margin-bottom: .8rem;
+}
+
+#calcImc {
+    padding: 1.6rem;
+    color: #fff;
+    background: #02799D;
+    border-radius: .4rem;
+    border: none;
+    width: 100%;
+    transition: background .3s;
+}
+
+#calcImc:hover{
+    cursor: pointer;
+    background-color: #004c63;
+}
+
+/* modal */
+.modalWrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalWrapper {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{ 
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.6rem 1.6rem 0 0;
+    cursor: pointer;
+
+    transition: transform .5s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+    transform: rotate(180deg);
+}
+
+/* error message */
+.errorMessage.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .3s, opacity .3s, visibility 0s;  
+}
+
+.errorMessage {
+    background-color: #F03E3E;
+    color: white;
+    font-weight: bold;
+    padding: .8rem;
+    text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: transform .3s, opacity .3s, visibility 0s 3s;
+}
